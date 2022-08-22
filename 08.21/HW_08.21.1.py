@@ -1,21 +1,21 @@
 import math
 
-
-class Tetraider:
+class Tetrahedron:
     def __init__(self, side: int):
         self.side = side
-        # нахождение площади правильного тетраэдера
-        self.area = (self.side ** 2) * math.sqrt(3)
-        # нахождение объема тетраэдера
+        # нахождение площади правильного тетраэдра
+        self.area = self.side**2 * math.sqrt(3)
+        # нахождение объема тетраэдра
         self.volume = math.sqrt(2)/12 * self.side ** 3
 
     def __str__(self):
-        return (f'площадь правильного тетраэдра = {self.area:.2f}\nобъем правильного тетраэдера = {self.volume:.2f}')
+        return f'площадь правильного тетраэдра = {self.area:.2f}\n' \
+               f'объём правильного тетраэдра = {self.volume:.2f}'
 
 
-tr1 = Tetraider(5)
+tr1 = Tetrahedron(5)
 print(tr1)
 
-# вывод функции print
+# stdout:
 # площадь правильного тетраэдра = 43.30
-# объем правильного тетраэдера = 14.73
+# объем правильного тетраэдра = 14.73
