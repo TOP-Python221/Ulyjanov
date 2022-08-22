@@ -1,5 +1,7 @@
 import math
 
+
+# ДОБАВИТЬ: документацию класса
 class Tetrahedron:
     def __init__(self, side: int):
         self.side = side
@@ -19,3 +21,5 @@ print(tr1)
 # stdout:
 # площадь правильного тетраэдра = 43.30
 # объем правильного тетраэдра = 14.73
+
+# ИТОГ: всё верно — 5/5
