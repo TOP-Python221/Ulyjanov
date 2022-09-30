@@ -1,12 +1,14 @@
 import datetime
 
 
+# ДОБАВИТЬ: документацию класса
 class TimeZone:
     # КОММЕНТАРИЙ: специальные методы мы размещаем наверху, пока нет весомых причин сделать иначе
     def __init__(self, offset: int, tz_name: str):
         # атрибут экземпляра для задания названия часового пояса
         self.tz_name = tz_name
         self.offset = offset
+        # ДОБАВИТЬ: аннотацию типа атрибута
         self.daypart = self.daytime()
 
     def __str__(self):
@@ -14,9 +16,11 @@ class TimeZone:
 
     def daytime(self):
         """ метод для определения периода суток """
-        now = str(self.time()).split()
-        now = now[1].split(':')
-        hours = int(now[0])
+        # now = str(self.time()).split()
+        # now = now[1].split(':')
+        # hours = int(now[0])
+        # ИСПОЛЬЗОВАТЬ: у объектов datetime есть атрибут hour
+        hours = self.time().hour
         # ИСПОЛЬЗОВАТЬ: как это вы пропустили, что Python позволяет записывать неравенства математически?
         if 5 <= hours < 12:
             return 'Сейчас утро'
@@ -43,3 +47,6 @@ print(tz1)
 # tests:
 # Сейчас утро
 # 2022-08-25 09:13:55.921148+04:00
+
+
+# ИТОГ: хорошо — 6/7
