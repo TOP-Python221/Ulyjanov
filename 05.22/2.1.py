@@ -1,6 +1,6 @@
 from random import choice
 
-l = []
+l=[]
 all_trying = 0
 trying = 0
 p = 0
@@ -8,17 +8,18 @@ o = 0
 
 for i in range(10):
     while True:
+        f = choice(('O', 'P'))
         trying += 1
         all_trying += 1
-        f = choice(('O', 'P'))
-        l.append(f)
         if f == 'P':
-            p = p + 1
+            p += 1
+            l.append(f)
             o = 0
         else:
             o += 1
+            l.append(f)
             p = 0
-        if o == 3 or p == 3:
+        if p == 3 or o == 3:
             print(f'{l} (число попыток: {trying})')
             l = []
             trying = 0
