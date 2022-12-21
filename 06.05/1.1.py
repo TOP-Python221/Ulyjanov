@@ -7,11 +7,8 @@ for _ in range(20):
     l1.append(randrange(0, 20))
     l2.append(randrange(0, 20))
 
-for i in l1:
-    set1.add(i)
-for i in l2:
-    set1.add(i)
-
+set1 = set(l1)
+set1 = set(l2)
 print(set1)
 
 # вывод
