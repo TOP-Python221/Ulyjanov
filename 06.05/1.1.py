@@ -3,6 +3,7 @@ from random import randrange
 l1 = []
 l2 = []
 set1 = set()
+summ = 0
 for _ in range(20):
     l1.append(randrange(0, 20))
     l2.append(randrange(0, 20))
