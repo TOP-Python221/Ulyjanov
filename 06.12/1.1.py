@@ -23,6 +23,8 @@ def ordinalDate(day,month,year):
         flag = False
     if month == 2 and day > 28 and flag == False:
         return 'В этом году в феврале 28 дней'
+    elif month == 2 and day > 29 and flag == True:
+        return 'В этом году в феврале 29 дней'
     for i in range(month - 1):
         summ_day = summ_day + l[i]
     summ_day += day
