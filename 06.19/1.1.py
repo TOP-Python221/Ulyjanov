@@ -4,7 +4,7 @@ def gcd(a, b):
         return a
     else:
         return gcd(b, a % b)
-
+11111111
 a = int(input("Введите первое число: "))
 b = int(input("Введите второе число: "))
 GCD = gcd(a, b)
